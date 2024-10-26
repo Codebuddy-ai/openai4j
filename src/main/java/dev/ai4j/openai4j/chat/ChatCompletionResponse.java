@@ -22,7 +22,7 @@ public final class ChatCompletionResponse {
     @JsonProperty
     private final String id;
     @JsonProperty
-    private final Integer created;
+    private final Long created;
     @JsonProperty
     private final String model;
     @JsonProperty
@@ -45,7 +45,7 @@ public final class ChatCompletionResponse {
         return id;
     }
 
-    public Integer created() {
+    public Long created() {
         return created;
     }
 
@@ -122,7 +122,7 @@ public final class ChatCompletionResponse {
     public static final class Builder {
 
         private String id;
-        private Integer created;
+        private Long created;
         private String model;
         private List<ChatCompletionChoice> choices;
         private Usage usage;
@@ -136,7 +136,7 @@ public final class ChatCompletionResponse {
             return this;
         }
 
-        public Builder created(Integer created) {
+        public Builder created(Long created) {
             this.created = created;
             return this;
         }
